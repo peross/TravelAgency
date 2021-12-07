@@ -1,0 +1,138 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $dark-gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    padding: 1.2rem;
+
+    @include lg{
+        padding: .8rem;
+    }
+
+    .hamburger-menu{
+        color: $white;
+        border: .1rem solid $white;
+        border-radius: .5rem;
+        font-size: 1.5rem;
+        padding: .2rem .5rem;
+        cursor: pointer;
+        display: none;
+
+        @include lg{
+            display: initial;
+        }
+    }
+
+    .logo{
+        font-size: 1.5rem;
+        font-weight: bolder;
+        color: $white;
+
+        span{
+            color: $orange;
+        }
+    }
+
+    .navbar{
+
+        @include lg{
+            position: absolute;
+            top: 100%;
+            right: 0;
+            left: 0;
+            background: $dark-gray;
+            border-top: 0.1rem solid rgba(255,255,255, 0.2);
+            padding: 1rem 2rem;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+
+        &.active{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        ul{
+            display: flex;
+
+            @include lg{
+                display: block;
+                border-radius: .5rem;
+            }
+
+            li{
+                a{
+                    color: $white;
+                    text-transform: uppercase;
+                    margin: 0 .8rem;
+
+                    @include lg{
+                        display: block;
+                        text-align: center;
+                        padding: 1rem;
+                        margin: 1rem;
+                        background: $light-black;
+                    }
+
+                    &:hover{
+                        color: $orange;
+                    }
+                }
+            }
+        }
+    }
+
+    .icons{
+        i{
+            font-size: 1.2rem;
+            color: $white;
+            margin: 0 .8rem;
+            cursor: pointer;
+
+            &:hover{
+                color: $orange;
+            }
+        }
+    }
+
+    .search-bar-container{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 1rem 1rem;
+        background: $dark-gray;
+        border-top: .1rem solid rgba(255,255,255,.2);
+        display: flex;
+        align-items: center;
+        z-index: 1001;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+        &.active{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        #search-btn{
+            width: 100%;
+            padding: .6rem;
+            text-transform: none;
+            color: $dark-gray;
+            font-size: 1.2rem;
+            border-radius: .5rem;
+        }
+
+        label{
+            color: $white;
+            cursor: pointer;
+            margin-left: 1rem;
+            font-size: 1.2rem;
+
+            &:hover{
+                color: $orange;
+            }
+        }
+    }
+}

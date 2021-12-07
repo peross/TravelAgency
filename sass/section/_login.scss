@@ -1,0 +1,76 @@
+.login-form-container{
+    position: fixed;
+    top: -120%;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+
+    &.active{
+        top: 0;
+    }
+
+    form{
+        margin: 2rem;
+        padding: 1rem 1rem;
+        border-radius: .5rem;
+        background: $white;
+        width: 35rem;
+
+        h3{
+            font-size: 2rem;
+            text-align: center;
+            text-transform: capitalize;
+            color: $gray;
+            padding: 1rem 0;
+        }
+
+        .input-box{
+            width: 100%;
+            padding: .6rem;
+            font-size: 1.2rem;
+            color: $dark-gray;
+            margin: .6rem 0;
+            border: .1rem solid rgba(0,0,0,0.3);
+
+            &:focus{
+                border-color: $orange;
+            }
+        }
+
+        .btn{
+            display: block;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        p{
+            color: $light-gray;
+            cursor: context-menu;
+            font-weight: 400;
+
+            @include mobile{
+                font-size: .9rem;
+            }
+
+            a{
+                color: $orange;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .close{
+        position: absolute;
+        top: 2rem;
+        right: 3rem;
+        font-size: 2rem;
+        color: $white;
+        cursor: pointer;
+    }
+}

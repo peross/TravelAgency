@@ -1,0 +1,55 @@
+.contact{
+    .row{
+        display: flex;
+        //flex-wrap: wrap;
+        gap: 1.5rem;
+        align-items: center;
+
+        @include tablet{
+            flex-wrap: wrap;
+        }
+
+        .image{
+            flex: 1 1 35rem;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        form{
+            flex: 1 1 50rem;
+            padding: 2rem;
+            box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+            border: .5rem;
+
+            .input-box{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                input{
+                    width: 49%;
+                    margin: 1rem 0;
+                    padding: 1rem;
+                    font-size: 1.5rem;
+                    color: $dark-gray;
+                    background: $contact-form-input;
+
+                    @include mobile{
+                        width: 100%;
+                    }
+                }
+            }
+            textarea{
+                height: 15rem;
+                width: 100%;
+                resize: none;
+                color: $dark-gray;
+                background: $contact-form-input;
+                font-size: 1.5rem;
+                padding: 1rem;
+            }
+        }
+    }
+}

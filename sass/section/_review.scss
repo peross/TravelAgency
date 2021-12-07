@@ -1,0 +1,43 @@
+.review{
+    text-align: center;
+    .box-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+
+        .box{
+            overflow: hidden;
+            box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+            border: 1rem solid $white;
+            border-radius: .5rem;
+            flex: 1 1 30rem;
+
+            img{
+                width: 15rem;
+                height: 15rem;
+                border-radius: 50%;
+            }
+
+            .content{
+                padding: 1rem;
+
+                h3{
+                    font-size: 2.5rem;
+                    color: $dark-gray;
+                    text-transform: capitalize;
+                }
+
+                p{
+                    font-size: 1.3rem;
+                    margin-bottom: 1rem;
+                }
+
+                .stars{
+                    i{
+                        color: $orange;
+                    }
+                }
+            }
+        }
+    }
+}

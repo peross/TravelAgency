@@ -1,0 +1,59 @@
+.footer{
+    background: $dark-gray;
+    text-align: center;
+
+    .box-container{
+        /* display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem; */
+
+        .box{
+            /* padding: 1rem 0;
+            flex: 1 1 25rem; */
+
+            h3{
+                font-size: 2.5rem;
+                //padding: 1rem 0;
+                color: $white;
+                text-transform: capitalize;
+            }
+
+            p{
+                font-size: 1.5rem;
+               // padding: 1rem 0;
+                color: $footer-p;
+            }
+
+            a{
+                display: inline-block;
+                padding: .5rem;
+                font-size: 1.5rem;
+               // padding: 1rem 0;
+                color: $footer-p;
+
+                &:hover{
+                    color: $orange;
+                }
+            }
+        }
+    }
+
+    .credit{
+        text-align: center;
+        padding: 1rem;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        font-weight: normal;
+        color: $white;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        text-transform: capitalize;
+
+        @include mobile{
+            font-size: 1.3rem;
+        }
+
+        span{
+            color: $orange;
+        }
+    }
+}
